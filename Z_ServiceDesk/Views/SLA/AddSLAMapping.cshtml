@@ -1,0 +1,57 @@
+﻿
+@{
+    ViewBag.Title = "AutoDiscovery";
+    Layout = "~/Views/Shared/_Layout_Index1.cshtml";
+}
+
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">SLA</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Index</a></li>
+                </ol>
+            </div>
+            <h4 class="page-title">CREATE SLA MAPPING  </h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Support Orgnization </label>
+                            <div class="col-lg-8">
+                                <select class="select2 form-control mb-3 custom-select" id="ddlClient" style="width: 100%;">
+                                    <option value="0">Select</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">SLA Name</label>
+                            <div class="col-lg-8">
+                                <select class="select2 form-control mb-3 custom-select" id="ddlClient" style="width: 100%;">
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+                           
+                            <button type="submit" class="btn btn-primary waves-effect waves-light">submit </button>
+                    </div><!--end card-body-->
+                </div>
+            </div>
+               <script src="~/Scripts/jquery-3.3.1.min.js"></script>
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/View/Common/Common.js"></script>

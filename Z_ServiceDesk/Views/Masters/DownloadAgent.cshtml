@@ -1,0 +1,102 @@
+﻿
+@{
+    ViewBag.Title = "DownloadAgent";
+    Layout = "~/Views/Shared/_Layout_Add.cshtml";
+}
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Masters</a></li>
+                    <li class="breadcrumb-item active">Download Agent</li>
+                </ol>
+            </div>
+            <h4 class="page-title">DOWNLOAD AGENT</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+<!-- end page title end breadcrumb -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="card-body table-responsive">
+
+                    <div class="col-md-12">
+                        <a href="~/Content/zdesk_agent_installer.zip"><b><button type="button" class="btn btn-primary waves-effect waves-light float-left"> Download Agent</button></b></a>
+                        <a target="_blank" href="~/Content/Zdesk_Instructions_How_to_Install.txt"><b><button type="button" class="btn btn-primary waves-effect waves-light float-left"> Download Instructions</button></b></a>
+                    </div>
+                    <br />
+                    <br />
+                    <p>
+                        <h4>  <b>  Installation Instructions for ZServiceDesk+ Agent </b>  </h4>
+                        <br />
+                        <br />
+                        -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                    <p>
+                        Step 1 - Download agent file named "zservicedesk_agent_installer.zip" from "Configuration" section in application using super admin login credentials.
+                    </p>
+                    <p>
+                        Step 2 - Unzip anywhere and paste the folder in "c:\users"
+                    </p>
+                    <p>
+                        Step 3 - Open the Folder "zservicedesk_agent_installer"
+                    </p>
+                    <p>
+                        Step 4 - Right click on file named "ZServiceDesk_Agent_Install.exe" and run as administrator
+                    </p>
+                    <p>
+                        (Installation Done)
+                    </p>
+                    -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                    <p>
+                        :- &nbsp;  How to check if agent is installed ?
+                    </p>
+                    <p>
+                        :- &nbsp;   Go to "Run" and type "services.msc"
+                    </p>
+                    <p>
+                        :- &nbsp;   You will be able to view service running named "zdesk_service"
+                    </p>
+                    <p>
+                        :- &nbsp;  How to check if agent is connected to application Server ?
+                    </p>
+                    <p>
+                        :- &nbsp;   Open the application with super admin credentials, Please check hostname/serial no. in "Autodiscovery" section under "Asset" menu.
+                    </p>
+                    <p>
+                        :- &nbsp;    How to uninstall the agent ?
+                    </p>
+                    <p>
+                        :- &nbsp;   Go to c:\users and open folder "Zdesk_Services"
+                    </p>
+                    <p>
+                        :- &nbsp;   or Go to c:\users\zdesk_agent_installer\Zdesk_Services
+                    </p>
+                    <p>
+                        :- &nbsp;  Rightclick on "ServiceRemove" to uninstall
+                    </p>
+                    <p>
+                        :- &nbsp;  Restart PC
+
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div> <!-- end row -->
+<!-- Plugins js -->
+<script src="../plugins/moment/moment.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../plugins/select2/select2.min.js"></script>
+<script src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+<script src="../plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="../plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+<script src="../assets/pages/jquery.forms-advanced.js"></script>
+

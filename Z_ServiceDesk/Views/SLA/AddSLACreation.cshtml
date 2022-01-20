@@ -1,0 +1,180 @@
+﻿
+@{
+    ViewBag.Title = "AutoDiscovery";
+    Layout = "~/Views/Shared/_Layout_Index1.cshtml";
+}
+
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">SLA</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Index</a></li>
+                </ol>
+            </div>
+            <h4 class="page-title">CREATE SLA  </h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">SLA Name</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" id="ex1" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Holiday Calendar Location</label>
+                            <div class="col-lg-8">
+                                <select class="select2 form-control mb-3 custom-select" id="ddlClient" style="width: 100%;">
+                                    <option value="0"></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Default</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" id="ex1" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Active</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" id="ex1" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-md-6">
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Service Window</label>
+                            <div class="col-lg-8">
+                                <input class="form-control" id="ex1" type="text">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <table id="tblAutoDiscovery" class="table table-bordered table-striped">
+                                        <thead>
+                                            <tr>
+                                                <th>Select</th>
+                                                <th>Weekday</th>
+                                                <th>From Time</th>
+                                                <th>To Time</th>
+                                            </tr>
+                                        </thead>
+
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Monday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Tuesday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+
+                                            </tr>
+                                        </tbody>
+
+
+
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Wednesday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+
+                                            </tr>
+                                        </tbody>
+
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Thursday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Friday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Saturday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+                                            </tr>
+                                        </tbody>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>Sunday</td>
+                                                <td>Select Time</td>
+                                                <td>Select Time - 1</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                       
+</div>
+                            </div>
+                        </div> <!-- end col -->
+                    </div> <!-- end row -->
+
+                </div><!--end card-body-->
+
+                                <button type="submit" class="btn btn-primary waves-effect waves-light">submit </button>
+                            </div><!--end card-body-->
+
+                        </div>
+                    </div>
+    </div>
+    <!--end card--> <!--end card-body--> <!--end card-->
+</div><!--end col-->
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/View/Common/Common.js"></script>

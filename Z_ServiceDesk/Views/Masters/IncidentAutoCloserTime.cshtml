@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewBag.Title = "IncidentAutoCloserTime";
+    Layout = "~/Views/Shared/_Layout_Index1.cshtml";
+}
+
+<!-- Sweet Alert -->
+<link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+<link href="../plugins/animate/animate.css" rel="stylesheet" type="text/css">
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">INCIDENTS</a></li>
+                </ol>
+            </div>
+            <h4 class="page-title">INCIDENT AUTO CLOSER TIME</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <button type="button" class="btn btn-gradient-primary px-4 mt-0 mb-3" onclick="location.href='/Masters/AddIncidentAutoCloserTime'"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Incident AutoCloser Time</button>
+                <table id="tblAutoDiscovery" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Auto Close Time Id</th>
+                            <th>Auto Closed Time</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>72:00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div> <!-- end row -->

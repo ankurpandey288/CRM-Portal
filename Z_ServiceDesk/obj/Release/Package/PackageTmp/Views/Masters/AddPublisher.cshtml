@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "AddPublisher";
+    Layout = "~/Views/Shared/_Layout_Add.cshtml";
+}
+
+<!-- Sweet Alert -->
+<link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+<link href="../plugins/animate/animate.css" rel="stylesheet" type="text/css">
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Master</a></li>
+                    <li class="breadcrumb-item active">Publisher</li>
+                </ol>
+            </div>
+            <h4 class="page-title">ADD PUBLISHER</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="form-group row">
+                    <div class="form-group col-md-6">
+                        <label for="lblsubject" class="col-form-label">Publisher *</label>
+                        <input type="text" class="form-control" id="txtPublisher">
+                        <ul class="parsley-errors-list filled" id="SpnPublisher" style="display:none">
+                            <li class="parsley-required">This value is required.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 text-lg-right">
+                        <button class="btn btn-gradient-primary" id="btnSubmit" type="submit">Submit</button>
+                        <button class="btn btn-gradient-danger" type="button">Cancel</button>
+                    </div>
+                </div>
+            </div><!--end card-body-->
+        </div>
+        <!--end card--> <!--end card-body--> <!--end card-->
+    </div><!--end col-->
+</div>
+
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<!-- Sweet-Alert  -->
+<script src="../plugins/sweet-alert2/sweetalert2.min.js"></script>
+<script src="../assets/pages/jquery.sweet-alert.init.js"></script>
+<script src="~/Scripts/View/Common/Common.js"></script>
+

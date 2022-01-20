@@ -1,0 +1,54 @@
+﻿
+@{
+    ViewBag.Title = "Publisher";
+    Layout = "~/Views/Shared/_Layout_Add.cshtml";
+}
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Masters</a></li>
+                    <li class="breadcrumb-item active">Publisher</li>
+                </ol>
+            </div>
+            <h4 class="page-title">PUBLISHER</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+<!-- end page title end breadcrumb -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <button type="button" class="btn btn-gradient-primary px-4 mt-0 mb-3" onclick="location.href='/Masters/AddPublisher'"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Location</button>
+                <table id="tblLocation" class="table table-striped table-bordered dt-responsive nowrap" style="border-collapse: collapse; border-spacing: 0; width: 100%;">
+                    <thead>
+                        <tr>
+                            <th><input id="CheckAll" type="checkbox"></th>
+                            <th>Publisher Id</th>
+                            <th>Publisher Name</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+
+                    <tbody></tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div> <!-- end row -->
+<!-- Plugins js -->
+<script src="../plugins/moment/moment.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../plugins/select2/select2.min.js"></script>
+<script src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+<script src="../plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="../plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+<script src="../assets/pages/jquery.forms-advanced.js"></script>
+

@@ -1,0 +1,118 @@
+﻿
+@{
+    ViewBag.Title = "NewIncident";
+    Layout = "~/Views/Shared/_Layout_Index1.cshtml";
+}
+
+
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Metrica</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">UI Kit</a></li>
+                    <li class="breadcrumb-item active">Responsive</li>
+                </ol>
+            </div>
+            <h4 class="page-title">Responsive Table</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+<!-- end page title end breadcrumb -->
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="row">
+                    <button type="button" class="btn btn-gradient-primary px-4 mt-0 mb-3" onclick="location.href='/Ticket/NewIncident'"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Patient</button>
+                    @*<div class="btn-group mb-4">
+                        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Primary <i class="mdi mdi-chevron-down"></i></button>
+                        <div class="dropdown-menu" style="">
+                            <a class="dropdown-item" href="#">Action</a>
+                            <a class="dropdown-item" href="#">Another action</a>
+                            <a class="dropdown-item" href="#">Something else here</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item" href="#">Separated link</a>
+                        </div>
+                    </div>*@
+                </div>
+            <div class="table-rep-plugin">
+                    <div class="table-responsive mb-0" data-pattern="priority-columns">
+                        <table id="tblTicket" class="table table-striped mb-0">
+                            @*s_tech-companies-1*@
+                            @*<thead>
+                                <tr>
+                                    <th>Company</th>
+                                    <th data-priority="1">Last Trade</th>
+                                    <th data-priority="3">Trade Time</th>
+                                    <th data-priority="1">Change</th>
+                                    <th data-priority="3">Prev Close</th>
+                                    <th data-priority="3">Open</th>
+                                    <th data-priority="6">Bid</th>
+                                    <th data-priority="6">Ask</th>
+                                    <th data-priority="6">1y Target Est</th>
+                                    <th class="text-right">Action</th>
+                                </tr>
+                            </thead>*@
+                            <thead>
+                                <tr>
+                                    <th><input type="checkbox" id="CheckAll" class="chkHeader" /></th>
+                                    <th>Incident ID</th>
+                                    <th>Subject</th>
+                                    <th style="display:none">Department</th>
+                                    <th style="display:none">Location</th>
+                                    <th style="display:none">Assigned Engineer</th>
+                                    <th style="display:none">User Contact Number</th>
+                                    <th style="display:none">User Email</th>
+                                    <th style="display:none">Resolved Date</th>
+                                    <th style="display:none">Priority</th>
+                                    <th style="display:none">Support Department</th>
+                                    <th style="display:none">Support Department Group</th>
+                                    <th style="display:none">Category</th>
+                                    <th style="display:none">Sub Category</th>
+                                    <th>Consultant</th>
+                                    <th>Submitter</th>
+                                    <th>Assigned To</th>
+                                    <th> Logged Time</th>
+                                    <th>SLA </th>
+                                    <th>Status</th>
+                                    <th>Building</th>
+                                    <th>Gate</th>
+                                    <th>Floor No</th>
+                                    <th>Section</th>
+                                    <th>Room No</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div><!--end card-body-->
+        </div><!--end card-->
+    </div> <!-- end col -->
+</div>
+<!-- end row -->
+<!-- Plugins js -->
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<script src="../plugins/moment/moment.js"></script>
+<script src="../plugins/daterangepicker/daterangepicker.js"></script>
+<script src="../plugins/select2/select2.min.js"></script>
+<script src="../plugins/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+<script src="../plugins/timepicker/bootstrap-material-datetimepicker.js"></script>
+<script src="../plugins/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+<script src="../plugins/bootstrap-touchspin/js/jquery.bootstrap-touchspin.min.js"></script>
+
+<script src="../assets/pages/jquery.forms-advanced.js"></script>
+
+<script src="~/Scripts/View/Common/Common.js"></script>
+<script src="~/Scripts/View/Ticket/Index.js"></script>
+
+
+
+

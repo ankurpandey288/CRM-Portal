@@ -1,0 +1,77 @@
+﻿
+@{
+    ViewBag.Title = "SoftwareAssignControl";
+    Layout = "~/Views/Shared/_Layout_Index1.cshtml";
+}
+
+<!-- Sweet Alert -->
+<link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+<link href="../plugins/animate/animate.css" rel="stylesheet" type="text/css">
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Masters</a></li>
+                </ol>
+            </div>
+            <h4 class="page-title">Application Control</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <button type="button" class="btn btn-gradient-primary px-4 mt-0 mb-3" onclick="location.href='/Inventory/AddSoftwareAssignControl'"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Software Assign Control</button>
+                <table id="tblAutoDiscovery" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th><input id="CheckAll" type="checkbox"></th>
+                            <th>Serial No</th>
+                            <th>Software Name</th>
+                            <th>Application Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>Tools for .Net 3.5</td>
+                            <td>WHITELISTED</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>Tools for .Net 3.5</td>
+                            <td>WHITELISTED</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>Tools for .Net 3.5</td>
+                            <td>WHITELISTED</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>Tools for .Net 3.5</td>
+                            <td>WHITELISTED</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>1</td>
+                            <td>Tools for .Net 3.5</td>
+                            <td>WHITELISTED</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div> <!-- end row -->

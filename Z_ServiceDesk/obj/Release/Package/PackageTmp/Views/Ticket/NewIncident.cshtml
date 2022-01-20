@@ -1,0 +1,316 @@
+﻿@{
+    /**/
+
+    ViewBag.Title = "Index1";
+    Layout = "~/Views/Shared/_Layout_Add.cshtml";
+    //Layout = "~/Views/Shared/_Wizard.cshtml";
+}
+
+<link href="~/dist/Test.css" rel="stylesheet" />
+
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Metrica</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">UI Kit</a></li>
+                    <li class="breadcrumb-item active">Form Advanced</li>
+                </ol>
+            </div>
+            <h4 class="page-title">INCIDENT</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+
+<div class="row">
+    <div class="col-sm-12">
+        <!-- Wizard container -->
+        <div class="wizard-container">
+            <div class="card wizard-card" data-color="red" id="wizard">
+                <form action="">
+                    <div class="wizard-header">
+                        <h3 class="wizard-title">
+                            ADD INCIDENT
+                        </h3>
+                    </div>
+                    <div class="wizard-navigation">
+                        <ul>
+                            <li><a href="#details" data-toggle="tab">Start</a></li>
+                            <li><a href="#captain" data-toggle="tab">Submitter</a></li>
+                            <li><a href="#description" data-toggle="tab">Classification</a></li>
+                            <li><a href="#Final" data-toggle="tab">Finish</a></li>
+                        </ul>
+                    </div>
+                    <div class="tab-content">
+
+
+                        <div class="tab-pane" id="details">
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="validationServer02">Subject</label>
+                                    <input type="text" class="form-control" id="txtSubject" placeholder="Subject" required="">
+                                </div><!--end col-->
+                                <div class="col-md-6">
+                                    <label for="validationServer01">Category</label>
+                                    <select class="select2 form-control mb-3 custom-select" id="ddlCategory" style="width: 100%;">
+                                        <option value="0">Select</option>
+                                    </select>
+                                    <!-- end col -->
+                                </div>
+                            </div><!--end row-->
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="validationServer01">Sub Category *</label>
+                                    <select class="select2 form-control mb-3 custom-select SubCategory" id="ddlSubCategory" required="" style="width: 100%;">
+                                        <option value="0">Select</option>
+                                    </select>
+                                    <!-- end col -->
+                                </div>
+                                <!--end col-->
+                            </div><!--end row-->
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <h4 class="mt-0 header-title">Symptoms</h4>
+                                            <textarea id="elm1" name="area"></textarea>
+                                        </div><!--end card-body-->
+                                    </div><!--end card-->
+                                </div>
+                            </div><!--end row-->
+                        </div>
+                        <div class="tab-pane" id="captain">
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="lblImpact">Logged Via *</label>
+                                    <select class="select form-control select2" id="ddlLoggedVia" required>
+                                        <option value="0">Select Logged Via</option>
+                                        <option value="1">Call</option>
+                                        <option value="2">Walk-In</option>
+                                        <option value="3">Email</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lblStatus">Business Unit *</label>
+                                    <select class="select form-control select2 ddlClient" Id="ddlClient" required>
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="lblStatus">Location *</label>
+                                    <select class="select form-control select2 ddlLocation" Id="ddlLocation" required>
+                                        <option value="0">Select Location</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lblStatus">User *</label>
+                                    <select class="select form-control select2" Id="ddlUser" required>
+                                        <option value="0">Select User</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="validationServer01">User Name *</label>
+                                    <input type="text" class="form-control" id="txtUserName">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="validationServer01">User Contact Number *</label>
+                                    <input type="text" class="form-control" id="txtUserContactNumber">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="lblSubCategory">Asset *</label>
+                                    <select class="select form-control select2" onchange="Asset()" id="ddlAsset" required>
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lblSubmittedBy">Department *</label>
+                                    <select class="select form-control select2" id="ddlDepartmentName" required>
+                                        <option value="0">Select Department</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="txtname" class="col-form-label">Section *</label>
+                                    <select class="select form-control select2" id="ddlSection">
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="txtname" class="col-form-label">Building*</label>
+                                    <select class="select form-control select2" id="ddlSubLocations">
+                                        <option value="0">Select Locations</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="txtname">Floor*</label>
+                                    <select class="select form-control select2" id="ddlFloor">
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="txtname">Room No*</label>
+                                    <input type="text" class="form-control" id="txtBuildingAndRoomNo">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="txtname" class="col-form-label">Serial No *</label>
+                                    <input type="text" class="form-control" id="txtSerialNo">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="txtname" class="col-form-label">Make *</label>
+                                    <input type="text" class="form-control" id="txtMake">
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="txtname" class="col-form-label">Model *</label>
+                                    <input type="text" class="form-control" id="txtModel">
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="inputPassword4" class="col-form-label">Support Type  </label>
+                                    <select class="select form-control select2" id="ddlSupportType">
+                                        <option value="0">Select</option>
+                                        <option value="1">Under Warranty</option>
+                                        <option value="2">Under AMC</option>
+                                        <option value="3">Out Of Support </option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="form-group col-md-6">
+                                    <label for="txtname">Gate*</label>
+                                    <input type="text" class="form-control" id="txtGate">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="txtname">Select Consultant*</label>
+                                    <select class="select form-control select2" id="ddlConsultant">
+                                        <option value="0">Select </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="description">
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="lblPriority" class="col-form-label">Mark As Not Responsible *</label>
+                                    <input style="margin-left:0px;margin-left: 21px;margin-top: 10px;" id="SLAcbk" class="form-check-input" type="checkbox">
+                                </div>
+                            </div>
+                            <div class="form-group row SLAApplicable">
+                                <div class="col-md-6" style="display:none">
+                                    <label for="lblPriority">Urgency*</label>
+                                    <select class="select form-control select2" disabled="disabled" id="ddlUrgency" required>
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6" style="display:none">
+                                    <label for="lblImpact">Impact *</label>
+                                    <select class="select form-control select2" disabled="disabled" id="ddlImpact" required>
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="lblChooseFile">Severity Level *</label>
+                                    <select class="form-control select2 ddlPriority" id="ddlPriority" required>
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lblSubmittedBy">Support Organization Name *</label>
+                                    <select class="select form-control select2 EMP" id="ddlSupportOrgnisation" required>
+                                        <option value="0">Select</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <div class="col-md-6">
+                                    <label for="lblSubmittedBy">Support Group Name *</label>
+                                    <select class="select form-control select2" id="ddlSupportGroup" required>
+                                        <option value="0">Select Support Group</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lblSubmittedBy" class="col-form-label">Call Type *</label>
+                                    <select class="select form-control select2" id="ddlCallType" required>
+                                        <option value="0">Select Call Type</option>
+                                        <option value="1">Skill Support</option>
+                                        <option value="2">Spare Support</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label for="lblSubmittedBy">Technician *</label>
+                                    <select class="select form-control select2 EMP" id="ddlTechnician" required>
+                                        <option value="0">Select Technician</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="Final">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="validatedCustomFile" required="">
+                                        <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>
+                                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 143px;">
+                                <div class="col-md-9">
+
+                                </div>
+                                <div class="col-md-3">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-7">
+                                <div class="pull-left">
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <input type='button' style="background-color: #999999;color: #FFFFFF;" class='btn btn-previous btn-fill btn-default btn-wd' name='previous' value='Previous' />
+                                <input type='reset' class='btn btn-next btn-fill btn-danger btn-wd' name='next' value='Next' />
+                                <button type="button" class="btn btn-danger waves-effect waves-light btn-finish" >Cancel</button>
+                                <button class="btn btn-gradient-primary pull-left btn-finish" onclick="Test();" id="btnSubmitTest">Submit</button>
+                                @*<input type='button' class='btn btn-finish btn-fill btn-danger btn-wd' name='finish' value='Finish' />*@
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </form>
+            </div>
+        </div> <!-- wizard container -->
+        <!--end form-->
+        <!--end card-body-->
+        <!--end card-->
+    </div><!--end col-->
+</div>
+
+
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/jquery.min.js"></script>
+<!-- Sweet-Alert  -->
+<script src="../plugins/sweet-alert2/sweetalert2.min.js"></script>
+<script src="../assets/pages/jquery.sweet-alert.init.js"></script>
+<script src="~/Scripts/View/Common/Common.js"></script>
+<script src="~/Scripts/View/Ticket/AddIncident.js"></script>
+<script src="~/Scripts/View/Ticket/Wizard.js"></script>

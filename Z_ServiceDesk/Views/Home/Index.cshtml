@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+    Layout = "~/Views/Shared/_Login.cshtml";
+}
+
+@model Api_ZserviceDesk.Models.zdesk_employee
+
+
+<div class="auth-page">
+    <div class="card auth-card shadow-lg">
+        <div class="card-body">
+            <div class="px-3">
+                <div class="auth-logo-box">
+                    <a href="../dashboard/analytics-index.html" class="logo logo-admin"><img src="../assets/images/logo-sm.png" height="55" alt="logo" class="auth-logo"></a>
+                </div><!--end auth-logo-box-->
+                <div class="text-center auth-logo-text">
+                    <h4 class="mt-0 mb-3 mt-5">eGovernance IT Support</h4>
+                </div>
+                @using (Html.BeginForm("Index", "Home", FormMethod.Post))
+                {
+                    if (@ViewBag.Message != null)
+                    {
+                        <div class="alert alert-danger alert-dismissable">
+                            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">x</button>
+                            <p class="text-muted mb-0"> @ViewBag.Message :-</p>
+
+                        </div>
+                    }
+
+
+                    <!--end auth-logo-text-->
+
+
+                    <div class="form-horizontal auth-form my-4">
+
+                        <div class="form-group">
+                            <label for="username">Username</label>
+                            <div class="input-group mb-3">
+                                <span class="auth-form-icon">
+                                    <i class="dripicons-user"></i>
+                                </span>
+                                <input class="form-control" type="email" id="emailaddress" name="email" required="" placeholder="Enter username">
+                            </div>
+                        </div><!--end form-group-->
+
+                        <div class="form-group">
+                            <label for="userpassword">Password</label>
+                            <div class="input-group mb-3">
+                                <span class="auth-form-icon">
+                                    <i class="dripicons-lock"></i>
+                                </span>
+                                <input type="password" class="form-control" required="" id="password" name="password" placeholder="Enter password">
+                            </div>
+                        </div><!--end form-group-->
+
+                        <div class="form-group row mt-4">
+                            <div class="col-sm-6">
+                                <div class="custom-control custom-switch switch-success">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitchSuccess">
+                                    <label class="custom-control-label text-muted" for="customSwitchSuccess">Remember me</label>
+                                </div>
+                            </div><!--end col-->
+                            <div class="col-sm-6 text-right">
+                                <a href="auth-recover-pw.html" class="text-muted font-13"><i class="dripicons-lock"></i> Forgot password?</a>
+                            </div><!--end col-->
+                        </div><!--end form-group-->
+
+                        <div class="form-group mb-0 row">
+                            <div class="col-12 mt-2">
+                                <button class="btn btn-gradient-primary btn-round btn-block waves-effect waves-light" id="btnLogin" type="submit">Log In <i class="fas fa-sign-in-alt ml-1"></i></button>
+                            </div><!--end col-->
+                        </div> <!--end form-group-->
+                    </div><!--end form-->
+
+                }
+            </div><!--end /div-->
+
+        </div><!--end card-body-->
+    </div><!--end card-->
+
+</div><!--end auth-page-->
+<script src="~/Scripts/jquery-3.3.1.min.js"></script>
+<script src="~/Scripts/View/Login/Index.js"></script>

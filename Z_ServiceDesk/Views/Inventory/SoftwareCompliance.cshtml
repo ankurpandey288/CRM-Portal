@@ -1,0 +1,56 @@
+﻿
+@{
+    ViewBag.Title = "SoftwareCompliance";
+    Layout = "~/Views/Shared/_Layout_Add.cshtml";
+}
+
+<!-- Sweet Alert -->
+<link href="../plugins/sweet-alert2/sweetalert2.min.css" rel="stylesheet" type="text/css">
+<link href="../plugins/animate/animate.css" rel="stylesheet" type="text/css">
+
+<!-- Page-Title -->
+<div class="row">
+    <div class="col-sm-12">
+        <div class="page-title-box">
+            <div class="float-right">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Dashboard</a></li>
+                    <li class="breadcrumb-item"><a href="javascript:void(0);">Fixed Assets</a></li>
+                </ol>
+            </div>
+            <h4 class="page-title">SOFTWARE COMPLIANCE</h4>
+        </div><!--end page-title-box-->
+    </div><!--end col-->
+</div>
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <button type="button" class="btn btn-gradient-primary px-4 mt-0 mb-3" onclick="location.href='/Inventory/AddSoftwareCompliance'"><i class="mdi mdi-plus-circle-outline mr-2"></i>Add New Software Compliance</button>
+                <table id="tblAutoDiscovery" class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Software Name</th>
+                            <th>Installed Qty</th>
+                            <th>Purchased Qty</th>
+                            <th>Varience</th>
+                            <th>Application Control Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>7-Zip 19.00</td>
+                            <td>6</td>
+                            <td>90</td>
+                            <td>98</td>
+                            <td>whitelisted</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div> <!-- end col -->
+</div> <!-- end row -->
